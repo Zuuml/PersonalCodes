@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <defs>
+      <radialGradient id="bg"><stop offset="0" stop-color="#242424"/><stop offset=".55" stop-color="#0d0d0d"/><stop offset="1" stop-color="#050505"/></radialGradient>
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2f2f2"/><stop offset=".23" stop-color="#858585"/><stop offset=".5" stop-color="#d9d9d9"/><stop offset=".76" stop-color="#575757"/><stop offset="1" stop-color="#c7c7c7"/></linearGradient>
+      <radialGradient id="rim"><stop offset=".55" stop-color="#555"/><stop offset=".7" stop-color="#e6e6e6"/><stop offset=".82" stop-color="#6c6c6c"/><stop offset="1" stop-color="#171717"/></radialGradient>
+      <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".7"/></filter>
+      <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+    </defs>
+    <rect width="1000" height="1000" fill="url(#bg)"/>
+    <circle cx="500" cy="500" r="405" fill="none" stroke="#d8ff3e" stroke-opacity=".15" stroke-width="5" filter="url(#glow)"/>
+    <g filter="url(#shadow)">
+      <circle cx="500" cy="500" r="390" fill="#090909" stroke="#252525" stroke-width="52"/>
+      <circle cx="500" cy="500" r="335" fill="url(#rim)"/>
+      <circle cx="500" cy="500" r="310" fill="#090909"/>
+      <polygon points="616.8,526.1 819.5,566.4 820.6,546.4 618.9,486.2" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="588.1,581.0 786.7,650.9 797.6,634.1 609.9,547.5" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="535.8,614.2 602.2,809.9 620.1,800.9 571.4,596.1" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="473.9,616.8 512.7,823.7 532.7,824.7 513.8,618.9" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="419.0,588.1 282.7,743.5 299.5,754.4 452.5,609.9" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="385.8,535.8 226.0,672.8 235.1,690.6 403.9,571.4" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="383.2,473.9 180.5,433.6 179.4,453.6 381.1,513.8" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="411.9,419.0 213.3,349.1 202.4,365.9 390.1,452.5" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="464.2,385.8 397.8,190.1 379.9,199.1 428.6,403.9" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="526.1,383.2 487.3,176.3 467.3,175.3 486.2,381.1" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="581.0,411.9 717.3,256.5 700.5,245.6 547.5,390.1" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="614.2,464.2 774.0,327.2 764.9,309.4 596.1,428.6" fill="url(#metal)" stroke="#565656" stroke-width="2"/>
+      <circle cx="500" cy="500" r="112" fill="url(#metal)" stroke="#555" stroke-width="3"/>
+      <circle cx="568.0" cy="500.0" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="521.0" cy="564.7" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="445.0" cy="540.0" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="445.0" cy="460.0" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="521.0" cy="435.3" r="14" fill="#050505" stroke="#777" stroke-width="4"/>
+      <circle cx="500" cy="500" r="40" fill="#0a0a0a" stroke="#d8ff3e" stroke-width="4"/>
+      <text x="500" y="508" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#eee">F</text>
+    </g>
+    <text x="48" y="938" font-family="Arial" font-size="20" letter-spacing="5" fill="#777">F02 MONACO</text>
+    </svg>
