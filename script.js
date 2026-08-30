@@ -1,5 +1,39 @@
 const header=document.querySelector('.header'),progress=document.querySelector('.progress'),menuBtn=document.querySelector('.menu-btn'),mobile=document.querySelector('.mobile-menu');
-function scrollUI(){const y=scrollY;header?.classList.toggle('scrolled',y>25);const m=document.documentElement.scrollHeight-innerHeight; if(progress)progress.style.width=(m?y/m*100:0)+'%'}addEventListener('scroll',scrollUI,{passive:true});scrollUI();
-menuBtn?.addEventListener('click',()=>{const o=!mobile.classList.contains('open');mobile.classList.toggle('open',o);menuBtn.classList.toggle('active',o);document.body.classList.toggle('menu-open',o)});mobile?.querySelectorAll('a').forEach(a=>a.onclick=()=>{mobile.classList.remove('open');menuBtn.classList.remove('active');document.body.classList.remove('menu-open')});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+
+function scrollUI() {
+    const y=scrollY;
+    header?.classList.toggle('scrolled',y>25);
+    const m=document.documentElement.scrollHeight-innerHeight;
+    if(progress)progress.style.width=(m?y/m*100:0)+'%'
+}
+addEventListener('scroll',scrollUI, {
+    passive:true
+}
+);
+scrollUI();
+menuBtn?.addEventListener('click',()=> {
+    const o=!mobile.classList.contains('open');
+    mobile.classList.toggle('open',o);
+    menuBtn.classList.toggle('active',o);
+    document.body.classList.toggle('menu-open',o)
+}
+);
+mobile?.querySelectorAll('a').forEach(a=>a.onclick=()=> {
+    mobile.classList.remove('open');
+    menuBtn.classList.remove('active');
+    document.body.classList.remove('menu-open')
+}
+);
+
+const io=new IntersectionObserver(es=>es.forEach(e=> {
+    if(e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target)
+    }
+}
+), {
+    threshold:.1
+}
+);
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());

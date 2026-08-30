@@ -1,1 +1,282 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080808"><title>FORGED — Model</title><link rel="stylesheet" href="style.css"></head><body id="top"><div class="noise"></div><div class="progress"></div><header class="header"><a class="logo" href="index.html"><span class="logo-mark">F</span><span>FORGED</span></a><nav class="nav"><a href="index.html" class="" data-i18n="nav_home">Главная</a><a href="catalog.html" class="active" data-i18n="nav_catalog">Каталог</a><a href="finishes.html" class="" data-i18n="nav_finishes">Покрытия</a><a href="technology.html" class="" data-i18n="nav_tech">Технологии</a><a href="projects.html" class="" data-i18n="nav_projects">Проекты</a><a href="contact.html" class="" data-i18n="nav_contact">Контакты</a></nav><div class="header-actions"><a class="pill cta-pill" href="contact.html" data-i18n="quote">Рассчитать комплект</a><div class="locale"><button class="pill locale-btn" data-locale-label>RU · RUB</button><div class="locale-menu"><button data-lang="ru">Русский <small>RUB</small></button><button data-lang="en">English <small>USD</small></button><button data-lang="ja">日本語 <small>JPY</small></button><button data-lang="zh">简体中文 <small>CNY</small></button></div></div><button class="menu-btn" aria-label="Menu"><span></span><span></span></button></div></header><div class="mobile-menu"><a href="index.html"><span data-i18n="nav_home">Главная</span><small>01</small></a><a href="catalog.html"><span data-i18n="nav_catalog">Каталог</span><small>02</small></a><a href="finishes.html"><span data-i18n="nav_finishes">Покрытия</span><small>03</small></a><a href="technology.html"><span data-i18n="nav_tech">Технологии</span><small>04</small></a><a href="projects.html"><span data-i18n="nav_projects">Проекты</span><small>05</small></a><a href="contact.html"><span data-i18n="nav_contact">Контакты</span><small>06</small></a><div style="margin-top:25px"><div class="locale"><button class="pill locale-btn" data-locale-label>RU · RUB</button><div class="locale-menu"><button data-lang="ru">Русский <small>RUB</small></button><button data-lang="en">English <small>USD</small></button><button data-lang="ja">日本語 <small>JPY</small></button><button data-lang="zh">简体中文 <small>CNY</small></button></div></div></div></div><main><section class="model-hero"><div class="model-visual reveal"><img id="modelImage" src="assets/f01.svg" alt="Wheel model"></div><div class="model-copy reveal"><a href="catalog.html" class="kicker" data-i18n="back">Назад в каталог</a><div class="model-code" id="modelCode">F01 / MONOBLOCK</div><h1 id="modelName">Vector S</h1><p class="lead muted" data-i18n="model_text">Каждая модель адаптируется под конкретный автомобиль: тормоза, вылет, ширину, ступицу и желаемую посадку</p><div class="price"><span data-i18n="price">Ориентир</span> — <strong id="modelPrice" data-price="168000"></strong></div><div class="spec-grid"><div class="spec"><small data-i18n="diameter">Диаметры</small><b id="modelSizes"></b></div><div class="spec"><small data-i18n="design">Геометрия</small><b id="modelSpokes"></b></div><div class="spec"><small data-i18n="finish">Покрытие</small><b id="modelFinish"></b></div><div class="spec"><small data-i18n="weight">Вес</small><b id="modelWeight"></b></div></div><div class="actions"><a class="btn primary" href="contact.html" data-i18n="quote">Рассчитать комплект</a><a class="btn" href="finishes.html" data-i18n="nav_finishes">Покрытия</a></div></div></section><section class="section" style="background:#0b0b0b"><div class="two-col"><h2 class="display reveal">CUSTOM<br><em>FITMENT</em></h2><div class="reveal"><p class="lead muted">PCD / ET / CB / WIDTH / BRAKE CLEARANCE</p><p class="muted">Every specification is calculated around the real vehicle and desired stance</p></div></div></section></main><script>document.addEventListener('DOMContentLoaded',()=>{const id=new URLSearchParams(location.search).get('id')||'f01',m=(window.FORGED_MODELS||[]).find(x=>x.id===id)||window.FORGED_MODELS[0];document.getElementById('modelImage').src='assets/'+m.id+'.svg';document.getElementById('modelCode').textContent=m.id.toUpperCase()+' / MONOBLOCK';document.getElementById('modelName').textContent=m.name;document.getElementById('modelPrice').dataset.price=m.price;document.getElementById('modelSizes').textContent=m.sizes;document.getElementById('modelSpokes').textContent=m.spokes;document.getElementById('modelFinish').textContent=m.finish;document.getElementById('modelWeight').textContent=m.weight;const lang=window.FI18N?.detect()||'ru';document.getElementById('modelPrice').textContent=window.FI18N?.price(m.price,lang,true)||m.price})</script><footer><span>© <span data-year></span> FORGED</span><span data-i18n="footer">FORGED — forged wheels</span><a href="#top">↑ TOP</a></footer><script src="models.js"></script><script src="i18n.js"></script><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#080808" name="theme-color"/>
+  <title>
+   FORGED — Model
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body id="top">
+  <div class="noise">
+  </div>
+  <div class="progress">
+  </div>
+  <header class="header">
+   <a class="logo" href="index.html">
+    <span class="logo-mark">
+     F
+    </span>
+    <span>
+     FORGED
+    </span>
+   </a>
+   <nav class="nav">
+    <a class="" data-i18n="nav_home" href="index.html">
+     Главная
+    </a>
+    <a class="active" data-i18n="nav_catalog" href="catalog.html">
+     Каталог
+    </a>
+    <a class="" data-i18n="nav_finishes" href="finishes.html">
+     Покрытия
+    </a>
+    <a class="" data-i18n="nav_tech" href="technology.html">
+     Технологии
+    </a>
+    <a class="" data-i18n="nav_projects" href="projects.html">
+     Проекты
+    </a>
+    <a class="" data-i18n="nav_contact" href="contact.html">
+     Контакты
+    </a>
+   </nav>
+   <div class="header-actions">
+    <a class="pill cta-pill" data-i18n="quote" href="contact.html">
+     Рассчитать комплект
+    </a>
+    <div class="locale">
+     <button class="pill locale-btn" data-locale-label="">
+      RU · RUB
+     </button>
+     <div class="locale-menu">
+      <button data-lang="ru">
+       Русский
+       <small>
+        RUB
+       </small>
+      </button>
+      <button data-lang="en">
+       English
+       <small>
+        USD
+       </small>
+      </button>
+      <button data-lang="ja">
+       日本語
+       <small>
+        JPY
+       </small>
+      </button>
+      <button data-lang="zh">
+       简体中文
+       <small>
+        CNY
+       </small>
+      </button>
+     </div>
+    </div>
+    <button aria-label="Menu" class="menu-btn">
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
+  </header>
+  <div class="mobile-menu">
+   <a href="index.html">
+    <span data-i18n="nav_home">
+     Главная
+    </span>
+    <small>
+     01
+    </small>
+   </a>
+   <a href="catalog.html">
+    <span data-i18n="nav_catalog">
+     Каталог
+    </span>
+    <small>
+     02
+    </small>
+   </a>
+   <a href="finishes.html">
+    <span data-i18n="nav_finishes">
+     Покрытия
+    </span>
+    <small>
+     03
+    </small>
+   </a>
+   <a href="technology.html">
+    <span data-i18n="nav_tech">
+     Технологии
+    </span>
+    <small>
+     04
+    </small>
+   </a>
+   <a href="projects.html">
+    <span data-i18n="nav_projects">
+     Проекты
+    </span>
+    <small>
+     05
+    </small>
+   </a>
+   <a href="contact.html">
+    <span data-i18n="nav_contact">
+     Контакты
+    </span>
+    <small>
+     06
+    </small>
+   </a>
+   <div style="margin-top:25px">
+    <div class="locale">
+     <button class="pill locale-btn" data-locale-label="">
+      RU · RUB
+     </button>
+     <div class="locale-menu">
+      <button data-lang="ru">
+       Русский
+       <small>
+        RUB
+       </small>
+      </button>
+      <button data-lang="en">
+       English
+       <small>
+        USD
+       </small>
+      </button>
+      <button data-lang="ja">
+       日本語
+       <small>
+        JPY
+       </small>
+      </button>
+      <button data-lang="zh">
+       简体中文
+       <small>
+        CNY
+       </small>
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <main>
+   <section class="model-hero">
+    <div class="model-visual reveal">
+     <img alt="Wheel model" id="modelImage" src="assets/f01.svg"/>
+    </div>
+    <div class="model-copy reveal">
+     <a class="kicker" data-i18n="back" href="catalog.html">
+      Назад в каталог
+     </a>
+     <div class="model-code" id="modelCode">
+      F01 / MONOBLOCK
+     </div>
+     <h1 id="modelName">
+      Vector S
+     </h1>
+     <p class="lead muted" data-i18n="model_text">
+      Каждая модель адаптируется под конкретный автомобиль: тормоза, вылет, ширину, ступицу и желаемую посадку
+     </p>
+     <div class="price">
+      <span data-i18n="price">
+       Ориентир
+      </span>
+      —
+      <strong data-price="168000" id="modelPrice">
+      </strong>
+     </div>
+     <div class="spec-grid">
+      <div class="spec">
+       <small data-i18n="diameter">
+        Диаметры
+       </small>
+       <b id="modelSizes">
+       </b>
+      </div>
+      <div class="spec">
+       <small data-i18n="design">
+        Геометрия
+       </small>
+       <b id="modelSpokes">
+       </b>
+      </div>
+      <div class="spec">
+       <small data-i18n="finish">
+        Покрытие
+       </small>
+       <b id="modelFinish">
+       </b>
+      </div>
+      <div class="spec">
+       <small data-i18n="weight">
+        Вес
+       </small>
+       <b id="modelWeight">
+       </b>
+      </div>
+     </div>
+     <div class="actions">
+      <a class="btn primary" data-i18n="quote" href="contact.html">
+       Рассчитать комплект
+      </a>
+      <a class="btn" data-i18n="nav_finishes" href="finishes.html">
+       Покрытия
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="section" style="background:#0b0b0b">
+    <div class="two-col">
+     <h2 class="display reveal">
+      CUSTOM
+      <br/>
+      <em>
+       FITMENT
+      </em>
+     </h2>
+     <div class="reveal">
+      <p class="lead muted">
+       PCD / ET / CB / WIDTH / BRAKE CLEARANCE
+      </p>
+      <p class="muted">
+       Every specification is calculated around the real vehicle and desired stance
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <script>
+   document.addEventListener('DOMContentLoaded',()=>{const id=new URLSearchParams(location.search).get('id')||'f01',m=(window.FORGED_MODELS||[]).find(x=>x.id===id)||window.FORGED_MODELS[0];document.getElementById('modelImage').src='assets/'+m.id+'.svg';document.getElementById('modelCode').textContent=m.id.toUpperCase()+' / MONOBLOCK';document.getElementById('modelName').textContent=m.name;document.getElementById('modelPrice').dataset.price=m.price;document.getElementById('modelSizes').textContent=m.sizes;document.getElementById('modelSpokes').textContent=m.spokes;document.getElementById('modelFinish').textContent=m.finish;document.getElementById('modelWeight').textContent=m.weight;const lang=window.FI18N?.detect()||'ru';document.getElementById('modelPrice').textContent=window.FI18N?.price(m.price,lang,true)||m.price})
+  </script>
+  <footer>
+   <span>
+    ©
+    <span data-year="">
+    </span>
+    FORGED
+   </span>
+   <span data-i18n="footer">
+    FORGED — forged wheels
+   </span>
+   <a href="#top">
+    ↑ TOP
+   </a>
+  </footer>
+  <script src="models.js">
+  </script>
+  <script src="i18n.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
