@@ -170,40 +170,61 @@
    </div>
   </div>
   <main>
-   <section class="hero">
+   <section class="hero video-hero">
+    <div class="hero-video-layer" aria-hidden="true">
+        <video
+            class="hero-bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            preload="metadata"
+            poster="assets/hero-bg-poster.jpg"
+        >
+            <source src="assets/hero-bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-video-overlay"></div>
+        <div class="hero-video-vignette"></div>
+    </div>
+
     <div class="hero-copy">
-     <div class="kicker" data-i18n="hero_k">
-      FORGED WHEELS / MADE TO FIT
-     </div>
-     <h1>
-      <span data-i18n="hero_a">
-       ДИСКИ
-      </span>
-      <span class="accent" data-i18n="hero_b">
-       В ЦЕНТРЕ
-      </span>
-      <span data-i18n="hero_c">
-       ВСЕГО
-      </span>
-     </h1>
-     <div class="hero-sub">
-      <p data-i18n="hero_p">
-       Не автомобиль как фон для продукта, а сам диск как главный объект — геометрия, поверхность, посадка и характер
-      </p>
-      <a class="circle-btn" data-i18n="explore" href="catalog.html">
-       Смотреть модели
-      </a>
-     </div>
+        <div class="kicker" data-i18n="hero_k">
+            FORGED WHEELS / MADE TO FIT
+        </div>
+
+        <h1>
+            <span data-i18n="hero_a">
+                ДИСКИ
+            </span>
+
+            <span class="accent" data-i18n="hero_b">
+                В ЦЕНТРЕ
+            </span>
+
+            <span data-i18n="hero_c">
+                ВСЕГО
+            </span>
+        </h1>
+
+        <div class="hero-sub">
+            <p data-i18n="hero_p">
+                Не автомобиль как фон для продукта, а сам диск как главный объект — геометрия, поверхность, посадка и характер
+            </p>
+
+            <a class="circle-btn" data-i18n="explore" href="catalog.html">
+                Смотреть модели
+            </a>
+        </div>
     </div>
-    <div class="hero-wheel">
-     <div class="wheel-ring">
-     </div>
-     <video autoplay muted loop>
-      <source alt="Forged wheel" src="assets/f191.mp4"/>
-     </video>
+
+    <div class="hero-wheel-decoration" aria-hidden="true">
+        <div class="wheel-ring"></div>
     </div>
-   </section>
-   <section class="ticker">
+</section>
+
+<section class="ticker">
     <div class="ticker-track">
      <span>
       FORGED MONOBLOCK
@@ -255,6 +276,38 @@
      </b>
     </div>
    </section>
+
+<section class="video-showcase">
+    <video
+        class="showcase-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="metadata"
+        poster="assets/wheel-loop-poster.jpg"
+    >
+        <source src="assets/wheel-loop.mp4" type="video/mp4">
+    </video>
+
+    <div class="showcase-overlay"></div>
+
+    <div class="showcase-copy">
+        <span class="kicker">
+            FORGED / DETAIL
+        </span>
+
+        <strong>
+            FORM
+            <br>
+            FITMENT
+            <br>
+            FINISH
+        </strong>
+    </div>
+</section>
+
    <section class="section">
     <div class="section-line kicker">
      <b>

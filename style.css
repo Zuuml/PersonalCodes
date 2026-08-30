@@ -1267,3 +1267,309 @@ footer {
         transform:none
     }
 }
+
+
+/* =========================================================
+   V8 — MOBILE VIDEO HERO
+   ========================================================= */
+
+.video-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-video-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #080808;
+}
+
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 58%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    pointer-events: none;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 8, 1) 0%,
+            rgba(8, 8, 8, .93) 30%,
+            rgba(8, 8, 8, .38) 62%,
+            rgba(8, 8, 8, .12) 100%
+        );
+}
+
+.hero-video-vignette {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8, 8, 8, .42) 0%,
+            transparent 24%,
+            transparent 68%,
+            rgba(8, 8, 8, .88) 100%
+        );
+}
+
+.video-hero .hero-copy {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-wheel-decoration {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 7vw;
+
+    width: min(35vw, 540px);
+    aspect-ratio: 1;
+
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.hero-wheel-decoration .wheel-ring {
+    width: 100%;
+    height: 100%;
+}
+
+/* Full video section */
+.video-showcase {
+    position: relative;
+
+    min-height: 82svh;
+    overflow: hidden;
+
+    background: #080808;
+}
+
+.showcase-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    pointer-events: none;
+}
+
+.showcase-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, .08) 0%,
+            rgba(0, 0, 0, .18) 42%,
+            rgba(0, 0, 0, .78) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .55) 0%,
+            transparent 60%
+        );
+}
+
+.showcase-copy {
+    position: absolute;
+    z-index: 2;
+    left: 4vw;
+    bottom: 4vw;
+}
+
+.showcase-copy .kicker {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.showcase-copy strong {
+    display: block;
+
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(58px, 9vw, 150px);
+    font-weight: 500;
+    line-height: .78;
+    letter-spacing: -.07em;
+
+    color: #f1f1ed;
+}
+
+.showcase-copy strong::first-line {
+    color: var(--accent);
+}
+
+/* Phones */
+@media (max-width: 700px) {
+    .video-hero {
+        min-height: 100svh;
+        padding:
+            calc(94px + env(safe-area-inset-top))
+            5vw
+            calc(38px + env(safe-area-inset-bottom));
+    }
+
+    .hero-video-layer {
+        inset: 0;
+    }
+
+    .hero-bg-video {
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    .hero-video-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(8, 8, 8, .32) 0%,
+                rgba(8, 8, 8, .08) 27%,
+                rgba(8, 8, 8, .33) 55%,
+                rgba(8, 8, 8, .92) 100%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(8, 8, 8, .44) 0%,
+                rgba(8, 8, 8, .08) 100%
+            );
+    }
+
+    .hero-video-vignette {
+        background:
+            radial-gradient(
+                circle at 50% 48%,
+                transparent 15%,
+                rgba(0, 0, 0, .18) 68%,
+                rgba(0, 0, 0, .46) 100%
+            );
+    }
+
+    .video-hero .hero-copy {
+        min-height: calc(
+            100svh
+            - 132px
+            - env(safe-area-inset-top)
+            - env(safe-area-inset-bottom)
+        );
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .video-hero h1 {
+        font-size: clamp(61px, 19vw, 92px);
+        line-height: .81;
+        text-shadow: 0 3px 22px rgba(0, 0, 0, .35);
+    }
+
+    .video-hero .hero-sub {
+        margin-top: 22px;
+        align-items: flex-end;
+    }
+
+    .video-hero .hero-sub p {
+        max-width: 220px;
+        color: rgba(255, 255, 255, .86);
+    }
+
+    .hero-wheel-decoration {
+        top: 43%;
+        left: 50%;
+        right: auto;
+
+        width: 78vw;
+
+        transform: translate(-50%, -50%);
+        opacity: .55;
+    }
+
+    .video-showcase {
+        min-height: 72svh;
+    }
+
+    .showcase-video {
+        object-position: center;
+    }
+
+    .showcase-copy {
+        left: 5vw;
+        right: 5vw;
+        bottom: calc(7vw + env(safe-area-inset-bottom));
+    }
+
+    .showcase-copy strong {
+        font-size: 14vw;
+    }
+}
+
+/* Small phones */
+@media (max-width: 430px) {
+    .video-hero h1 {
+        font-size: 18.5vw;
+    }
+
+    .video-hero .hero-sub p {
+        font-size: 12px;
+        max-width: 195px;
+    }
+
+    .hero-wheel-decoration {
+        width: 84vw;
+    }
+
+    .video-showcase {
+        min-height: 68svh;
+    }
+}
+
+/* Save battery / accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg-video,
+    .showcase-video {
+        display: none;
+    }
+
+    .hero-video-layer {
+        background:
+            #080808
+            url("assets/hero-bg-poster.jpg")
+            center / cover
+            no-repeat;
+    }
+
+    .video-showcase {
+        background:
+            #080808
+            url("assets/wheel-loop-poster.jpg")
+            center / cover
+            no-repeat;
+    }
+}
