@@ -1334,19 +1334,6 @@ footer {
     z-index: 3;
 }
 
-.hero-wheel-decoration {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    right: 7vw;
-
-    width: min(35vw, 540px);
-    aspect-ratio: 1;
-
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
 .hero-wheel-decoration .wheel-ring {
     width: 100%;
     height: 100%;
