@@ -1,286 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#080808" />
-  <meta name="description" content="Кованые диски по индивидуальным параметрам" />
-  <title>FORGED — кованые диски</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="noise"></div>
-  <div class="cursor-glow" id="cursorGlow"></div>
-  <div class="page-progress" id="pageProgress"></div>
-
-  <header class="header" id="header">
-    <a class="logo" href="#top" aria-label="FORGED">
-      <span class="logo-mark">F</span>
-      <span>FORGED</span>
-    </a>
-
-    <nav class="desktop-nav" aria-label="Основная навигация">
-      <a href="#about" data-i18n="menu_about">О нас</a>
-      <a href="#process" data-i18n="menu_process">Как делаем</a>
-      <a href="catalog.html" data-i18n="menu_catalog">Каталог</a>
-      <a href="#gallery" data-i18n="menu_works">Работы</a>
-      <a href="#contact" data-i18n="menu_contact">Связаться</a>
-    </nav>
-
-    <a class="header-cta" href="#contact" data-i18n="header_cta">Обсудить комплект ↗</a>
-
-    <div class="locale-switcher">
-      <button class="locale-button" type="button" data-locale-label>RU · RUB</button>
-      <div class="locale-menu">
-        <button class="locale-option" type="button" data-lang="ru"><span>Русский</span><small>RUB</small></button>
-        <button class="locale-option" type="button" data-lang="en"><span>English</span><small>USD</small></button>
-        <button class="locale-option" type="button" data-lang="ja"><span>日本語</span><small>JPY</small></button>
-        <button class="locale-option" type="button" data-lang="zh"><span>简体中文</span><small>CNY</small></button>
-      </div>
-    </div>
-
-    <button class="menu-btn" id="menuBtn" aria-label="Открыть меню" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-inner">
-      <a href="#about"><small>01</small><span data-i18n="menu_about">О нас</span></a>
-      <a href="#process"><small>02</small><span data-i18n="menu_process">Как делаем</span></a>
-      <a href="catalog.html"><small>03</small><span data-i18n="menu_catalog">Каталог</span></a>
-      <a href="#gallery"><small>04</small><span data-i18n="menu_works">Работы</span></a>
-      <a href="#contact"><small>05</small><span data-i18n="menu_contact">Связаться</span></a>
-    </div>
-    <div class="mobile-locale">
-      <div class="locale-switcher">
-        <button class="locale-button" type="button" data-locale-label>RU · RUB</button>
-        <div class="locale-menu">
-          <button class="locale-option" type="button" data-lang="ru"><span>Русский</span><small>RUB</small></button>
-          <button class="locale-option" type="button" data-lang="en"><span>English</span><small>USD</small></button>
-          <button class="locale-option" type="button" data-lang="ja"><span>日本語</span><small>JPY</small></button>
-        <button class="locale-option" type="button" data-lang="zh"><span>简体中文</span><small>CNY</small></button>
-        </div>
-      </div>
-    </div>
-    <div class="mobile-menu-bottom">КОВАНЫЕ ДИСКИ ПОД КОНКРЕТНЫЙ АВТОМОБИЛЬ</div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#080808" name="theme-color"/>
+  <title>
+   FORGED — forged wheels
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body id="top">
+  <div class="noise">
   </div>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-bg" id="heroBg"></div>
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-        <p class="eyebrow hero-anim" style="--delay:.08s" data-i18n="hero_kicker">FORGED WHEELS / CUSTOM FITMENT</p>
-
-        <h1 aria-label="Кованые диски">
-          <span class="hero-line"><i style="--delay:.16s" data-i18n="hero_title_1">КОВАНЫЕ</i></span>
-          <span class="hero-line accent-line"><i style="--delay:.28s" data-i18n="hero_title_2">ДИСКИ</i></span>
-        </h1>
-
-        <div class="hero-bottom hero-anim" style="--delay:.42s">
-          <p><span data-i18n-html="hero_text">Под конкретную машину, посадку и стиль<br>без универсальных решений</span></p>
-          <a class="circle-link magnetic" href="#gallery" aria-label="Смотреть работы">
-            <span data-i18n="menu_works">Работы</span>
-            <b>↘</b>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-index hero-anim" style="--delay:.55s">
-        <span>01</span><span>/</span><span>04</span>
-      </div>
-    </section>
-
-    <section class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>FORGED WHEELS</span><b>✦</b>
-        <span>CUSTOM FITMENT</span><b>✦</b>
-        <span>BRUSHED</span><b>✦</b>
-        <span>POLISHED</span><b>✦</b>
-        <span>FORGED WHEELS</span><b>✦</b>
-        <span>CUSTOM FITMENT</span><b>✦</b>
-        <span>BRUSHED</span><b>✦</b>
-        <span>POLISHED</span><b>✦</b>
-      </div>
-    </section>
-
-    <section class="manifesto section" id="about">
-      <div class="section-label reveal"><span>01</span> / <span data-i18n="about_label">О НАС</span></div>
-      <div class="manifesto-grid">
-        <h2 class="reveal"><span data-i18n="about_title_1">НЕ ПРОСТО</span><br><span data-i18n="about_title_2">ДИСКИ</span><br><em data-i18n="about_title_3">ПОД МАШИНУ</em></h2>
-
-        <div class="manifesto-copy reveal">
-          <p>
-            <span data-i18n="about_p1">Подбираем геометрию, вылет, ширину и визуальный баланс так, чтобы комплект выглядел частью автомобиля, а не случайной деталью</span>
-          </p>
-          <p class="muted">
-            <span data-i18n="about_p2">Работа начинается с машины и задачи клиента. Уже потом — форма спиц, поверхность, цвет и финальный характер комплекта</span>
-          </p>
-          <a class="text-link" href="#process"><span data-i18n="about_link">Как проходит работа</span> <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="wheel-focus">
-      <div class="wheel-focus-photo parallax"></div>
-      <div class="wheel-focus-overlay"></div>
-      <div class="wheel-focus-caption reveal">
-        <span>ФОРМА</span>
-        <span>ПОСАДКА</span>
-        <span>ДЕТАЛИ</span>
-      </div>
-    </section>
-
-    <section class="process section" id="process">
-      <div class="section-label reveal"><span>02</span> / КАК ДЕЛАЕМ</div>
-
-      <div class="section-head">
-        <h2 class="reveal">ОТ ЭСКИЗА<br>ДО <em>ГОТОВОГО КОМПЛЕКТА</em></h2>
-        <p class="reveal">
-          Без лишней магии — просто понятный процесс, в котором важен каждый размер
-        </p>
-      </div>
-
-      <div class="steps">
-        <article class="step reveal">
-          <span>01</span>
-          <h3>Автомобиль</h3>
-          <p>Смотрим кузов, тормоза, посадку и то, как машина должна выглядеть в итоге</p>
-          <b>↗</b>
-        </article>
-        <article class="step reveal">
-          <span>02</span>
-          <h3>Размеры</h3>
-          <p>Диаметр, ширина, вылет, PCD, ступица — всё подбирается под конкретную конфигурацию</p>
-          <b>↗</b>
-        </article>
-        <article class="step reveal">
-          <span>03</span>
-          <h3>Дизайн</h3>
-          <p>Форма спиц и пропорции делаются под сам автомобиль, а не наоборот</p>
-          <b>↗</b>
-        </article>
-        <article class="step reveal">
-          <span>04</span>
-          <h3>Производство</h3>
-          <p>Механическая обработка заготовки и контроль геометрии на каждом этапе</p>
-          <b>↗</b>
-        </article>
-        <article class="step reveal">
-          <span>05</span>
-          <h3>Финиш</h3>
-          <p>Покраска, браширование, полировка или комбинированная отделка</p>
-          <b>↗</b>
-        </article>
-        <article class="step reveal">
-          <span>06</span>
-          <h3>Установка</h3>
-          <p>Готовый комплект без ощущения, что он был выбран из общего каталога</p>
-          <b>↗</b>
-        </article>
-      </div>
-    </section>
-
-    <section class="detail-pair">
-      <article class="detail-card detail-1">
-        <div class="detail-overlay"></div>
-        <div class="detail-content reveal">
-          <span>FINISH / 01</span>
-          <h3>BRUSHED</h3>
-          <p>Текстура металла остаётся видимой и работает вместе с формой диска</p>
-        </div>
-      </article>
-
-      <article class="detail-card detail-2">
-        <div class="detail-overlay"></div>
-        <div class="detail-content reveal">
-          <span>FINISH / 02</span>
-          <h3>POLISHED</h3>
-          <p>Больше блеска, больше контраста и совсем другой характер поверхности</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="gallery section" id="gallery">
-      <div class="section-label reveal"><span>03</span> / РАБОТЫ</div>
-
-      <div class="section-head">
-        <h2 class="reveal">СНАЧАЛА<br><em>ДИСК</em><br>ПОТОМ МАШИНА</h2>
-        <p class="reveal">
-          Здесь лучше показывать крупные детали, профиль, лицевую часть и уже потом общий вид автомобиля
-        </p>
-      </div>
-
-      <div class="gallery-grid">
-        <figure class="gallery-item big reveal">
-          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=85" alt="Крупный план колеса автомобиля" loading="lazy">
-          <div class="gallery-mask"></div>
-          <figcaption><span>DETAIL / 001</span><b>View ↗</b></figcaption>
-        </figure>
-
-        <figure class="gallery-item reveal">
-          <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=85" alt="Колесо премиального автомобиля" loading="lazy">
-          <div class="gallery-mask"></div>
-          <figcaption><span>DETAIL / 002</span><b>View ↗</b></figcaption>
-        </figure>
-
-        <figure class="gallery-item reveal">
-          <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=85" alt="Колесо автомобиля" loading="lazy">
-          <div class="gallery-mask"></div>
-          <figcaption><span>DETAIL / 003</span><b>View ↗</b></figcaption>
-        </figure>
-
-        <figure class="gallery-item wide reveal">
-          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85" alt="Автомобиль с коваными дисками" loading="lazy">
-          <div class="gallery-mask"></div>
-          <figcaption><span>CAR / 004</span><b>View ↗</b></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="cta section" id="contact">
-      <div class="section-label reveal"><span>04</span> / СВЯЗАТЬСЯ</div>
-
-      <div class="cta-inner">
-        <div class="reveal">
-          <p class="eyebrow">READY WHEN YOU ARE</p>
-          <h2>СОБЕРЁМ<br><em>ТВОЙ КОМПЛЕКТ</em></h2>
-        </div>
-
-        <div class="contact-card reveal">
-          <p>
-            Скинь модель машины, желаемый размер и пару референсов
-            Дальше уже разберёмся по месту
-          </p>
-          <a class="contact-btn" href="catalog.html">
-            <span data-i18n="catalog_link">Каталог и цены</span> <span>↗</span>
-          </a>
-          <a class="contact-btn" href="https://t.me/your_username" target="_blank" rel="noopener">
-            Telegram <span>↗</span>
-          </a>
-          <a class="contact-btn" href="tel:+70000000000">
-            +7 000 000-00-00 <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <a class="logo footer-logo" href="#top">
-      <span class="logo-mark">F</span><span>FORGED</span>
+  <div class="progress">
+  </div>
+  <header class="header">
+   <a class="logo" href="index.html">
+    <span class="logo-mark">
+     F
+    </span>
+    <span>
+     FORGED
+    </span>
+   </a>
+   <nav class="nav">
+    <a class="active" data-i18n="nav_home" href="index.html">
+     Главная
     </a>
-    <p>© <span id="year"></span> FORGED</p>
-    <a href="#top">Наверх ↑</a>
+    <a class="" data-i18n="nav_catalog" href="catalog.html">
+     Каталог
+    </a>
+    <a class="" data-i18n="nav_finishes" href="finishes.html">
+     Покрытия
+    </a>
+    <a class="" data-i18n="nav_tech" href="technology.html">
+     Технологии
+    </a>
+    <a class="" data-i18n="nav_projects" href="projects.html">
+     Проекты
+    </a>
+    <a class="" data-i18n="nav_contact" href="contact.html">
+     Контакты
+    </a>
+   </nav>
+   <div class="header-actions">
+    <a class="pill cta-pill" data-i18n="quote" href="contact.html">
+     Рассчитать комплект
+    </a>
+    <div class="locale">
+     <button class="pill locale-btn" data-locale-label="">
+      RU · RUB
+     </button>
+     <div class="locale-menu">
+      <button data-lang="ru">
+       Русский
+       <small>
+        RUB
+       </small>
+      </button>
+      <button data-lang="en">
+       English
+       <small>
+        USD
+       </small>
+      </button>
+      <button data-lang="ja">
+       日本語
+       <small>
+        JPY
+       </small>
+      </button>
+      <button data-lang="zh">
+       简体中文
+       <small>
+        CNY
+       </small>
+      </button>
+     </div>
+    </div>
+    <button aria-label="Menu" class="menu-btn">
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
+  </header>
+  <div class="mobile-menu">
+   <a href="index.html">
+    <span data-i18n="nav_home">
+     Главная
+    </span>
+    <small>
+     01
+    </small>
+   </a>
+   <a href="catalog.html">
+    <span data-i18n="nav_catalog">
+     Каталог
+    </span>
+    <small>
+     02
+    </small>
+   </a>
+   <a href="finishes.html">
+    <span data-i18n="nav_finishes">
+     Покрытия
+    </span>
+    <small>
+     03
+    </small>
+   </a>
+   <a href="technology.html">
+    <span data-i18n="nav_tech">
+     Технологии
+    </span>
+    <small>
+     04
+    </small>
+   </a>
+   <a href="projects.html">
+    <span data-i18n="nav_projects">
+     Проекты
+    </span>
+    <small>
+     05
+    </small>
+   </a>
+   <a href="contact.html">
+    <span data-i18n="nav_contact">
+     Контакты
+    </span>
+    <small>
+     06
+    </small>
+   </a>
+   <div style="margin-top:25px">
+    <div class="locale">
+     <button class="pill locale-btn" data-locale-label="">
+      RU · RUB
+     </button>
+     <div class="locale-menu">
+      <button data-lang="ru">
+       Русский
+       <small>
+        RUB
+       </small>
+      </button>
+      <button data-lang="en">
+       English
+       <small>
+        USD
+       </small>
+      </button>
+      <button data-lang="ja">
+       日本語
+       <small>
+        JPY
+       </small>
+      </button>
+      <button data-lang="zh">
+       简体中文
+       <small>
+        CNY
+       </small>
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <main>
+   <section class="hero">
+    <div class="hero-copy">
+     <div class="kicker" data-i18n="hero_k">
+      FORGED WHEELS / MADE TO FIT
+     </div>
+     <h1>
+      <span data-i18n="hero_a">
+       ДИСКИ
+      </span>
+      <span class="accent" data-i18n="hero_b">
+       В ЦЕНТРЕ
+      </span>
+      <span data-i18n="hero_c">
+       ВСЕГО
+      </span>
+     </h1>
+     <div class="hero-sub">
+      <p data-i18n="hero_p">
+       Не автомобиль как фон для продукта, а сам диск как главный объект — геометрия, поверхность, посадка и характер
+      </p>
+      <a class="circle-btn" data-i18n="explore" href="catalog.html">
+       Смотреть модели
+      </a>
+     </div>
+    </div>
+    <div class="hero-wheel">
+     <div class="wheel-ring">
+     </div>
+     <img alt="Forged wheel" src="assets/f01.svg"/>
+    </div>
+   </section>
+   <section class="ticker">
+    <div class="ticker-track">
+     <span>
+      FORGED MONOBLOCK
+     </span>
+     <b>
+      ✦
+     </b>
+     <span>
+      CUSTOM FITMENT
+     </span>
+     <b>
+      ✦
+     </b>
+     <span>
+      BRUSHED
+     </span>
+     <b>
+      ✦
+     </b>
+     <span>
+      POLISHED
+     </span>
+     <b>
+      ✦
+     </b>
+     <span>
+      FORGED MONOBLOCK
+     </span>
+     <b>
+      ✦
+     </b>
+     <span>
+      CUSTOM FITMENT
+     </span>
+     <b>
+      ✦
+     </b>
+     <span>
+      BRUSHED
+     </span>
+     <b>
+      ✦
+     </b>
+     <span>
+      POLISHED
+     </span>
+     <b>
+      ✦
+     </b>
+    </div>
+   </section>
+   <section class="section">
+    <div class="section-line kicker">
+     <b>
+      01
+     </b>
+     / FORGED
+    </div>
+    <div class="two-col" style="margin-top:50px">
+     <h2 class="display reveal" data-i18n="home_about">
+      Сайт построен вокруг диска
+     </h2>
+     <p class="lead muted reveal" data-i18n="home_about_p">
+      Каталог, отдельные страницы моделей, покрытия, технология производства и реальные посадки на автомобилях — без ощущения одностраничного промо-лендинга
+     </p>
+    </div>
+    <div class="feature-grid">
+     <a class="feature reveal" href="catalog.html">
+      <span class="num">
+       01
+      </span>
+      <h3 data-i18n="nav_catalog">
+       Каталог
+      </h3>
+      <p>
+       8 design directions / custom fitment
+      </p>
+      <span class="go">
+       ↗
+      </span>
+     </a>
+     <a class="feature reveal" href="finishes.html">
+      <span class="num">
+       02
+      </span>
+      <h3 data-i18n="nav_finishes">
+       Покрытия
+      </h3>
+      <p>
+       Brushed / polished / satin / custom
+      </p>
+      <span class="go">
+       ↗
+      </span>
+     </a>
+     <a class="feature reveal" href="technology.html">
+      <span class="num">
+       03
+      </span>
+      <h3 data-i18n="nav_tech">
+       Технологии
+      </h3>
+      <p>
+       Engineering / machining / QC
+      </p>
+      <span class="go">
+       ↗
+      </span>
+     </a>
+     <a class="feature reveal" href="projects.html">
+      <span class="num">
+       04
+      </span>
+      <h3 data-i18n="nav_projects">
+       Проекты
+      </h3>
+      <p>
+       Real fitment / secondary car context
+      </p>
+      <span class="go">
+       ↗
+      </span>
+     </a>
+    </div>
+   </section>
+   <section class="section" style="background:#0b0b0b">
+    <div class="section-line kicker">
+     <b>
+      02
+     </b>
+     / FEATURED
+    </div>
+    <div class="two-col" style="margin-top:45px">
+     <h2 class="display reveal">
+      <span data-i18n="hero_a">
+       ДИСКИ
+      </span>
+      <br/>
+      <em>
+       FORGED
+      </em>
+     </h2>
+     <a class="btn reveal" href="catalog.html">
+      <span data-i18n="nav_catalog">
+       Каталог
+      </span>
+      <span>
+       ↗
+      </span>
+     </a>
+    </div>
+    <div class="product-strip">
+     <a class="product-card reveal" href="model.html?id=f01">
+      <div class="product-img">
+       <img alt="Vector S" src="assets/f01.svg"/>
+       <span class="badge">
+        sport
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F01 / MONOBLOCK
+       </span>
+       <h3>
+        Vector S
+       </h3>
+       <div class="meta">
+        <span>
+         18–22″
+        </span>
+        <span data-price="168000">
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" href="model.html?id=f02">
+      <div class="product-img">
+       <img alt="Monaco" src="assets/f02.svg"/>
+       <span class="badge">
+        luxury
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F02 / MONOBLOCK
+       </span>
+       <h3>
+        Monaco
+       </h3>
+       <div class="meta">
+        <span>
+         19–24″
+        </span>
+        <span data-price="192000">
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" href="model.html?id=f03">
+      <div class="product-img">
+       <img alt="Heritage" src="assets/f03.svg"/>
+       <span class="badge">
+        classic
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F03 / MONOBLOCK
+       </span>
+       <h3>
+        Heritage
+       </h3>
+       <div class="meta">
+        <span>
+         18–21″
+        </span>
+        <span data-price="176000">
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+    </div>
+   </section>
+   <section class="section cta">
+    <div class="two-col">
+     <h2 class="display reveal" data-i18n="cta_title">
+      СОБЕРЁМ ТВОЙ КОМПЛЕКТ
+     </h2>
+     <div class="reveal">
+      <p class="lead" data-i18n="cta_p">
+       Выбери модель или просто пришли референс — дальше подберём параметры и отделку
+      </p>
+      <a class="btn primary" data-i18n="cta_btn" href="contact.html">
+       Перейти к расчёту
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <span>
+    ©
+    <span data-year="">
+    </span>
+    FORGED
+   </span>
+   <span data-i18n="footer">
+    FORGED — forged wheels
+   </span>
+   <a href="#top">
+    ↑ TOP
+   </a>
   </footer>
-
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
-</body>
+  <script src="models.js">
+  </script>
+  <script src="i18n.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
 </html>
