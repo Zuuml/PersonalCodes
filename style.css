@@ -1501,14 +1501,7 @@ footer {
     }
 
     .hero-wheel-decoration {
-        top: 43%;
-        left: 50%;
-        right: auto;
-
-        width: 78vw;
-
-        transform: translate(-50%, -50%);
-        opacity: .55;
+        display: none;
     }
 
     .video-showcase {
