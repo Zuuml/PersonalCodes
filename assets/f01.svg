@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <defs>
+      <radialGradient id="bg"><stop offset="0" stop-color="#242424"/><stop offset=".55" stop-color="#0d0d0d"/><stop offset="1" stop-color="#050505"/></radialGradient>
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2f2f2"/><stop offset=".23" stop-color="#858585"/><stop offset=".5" stop-color="#d9d9d9"/><stop offset=".76" stop-color="#575757"/><stop offset="1" stop-color="#c7c7c7"/></linearGradient>
+      <radialGradient id="rim"><stop offset=".55" stop-color="#555"/><stop offset=".7" stop-color="#e6e6e6"/><stop offset=".82" stop-color="#6c6c6c"/><stop offset="1" stop-color="#171717"/></radialGradient>
+      <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".7"/></filter>
+      <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+    </defs>
+    <rect width="1000" height="1000" fill="url(#bg)"/>
+    <circle cx="500" cy="500" r="405" fill="none" stroke="#d8ff3e" stroke-opacity=".15" stroke-width="5" filter="url(#glow)"/>
+    <g filter="url(#shadow)">
+      <circle cx="500" cy="500" r="390" fill="#090909" stroke="#252525" stroke-width="52"/>
+      <circle cx="500" cy="500" r="335" fill="url(#rim)"/>
+      <circle cx="500" cy="500" r="310" fill="#090909"/>
+      <polygon points="618.0,520.0 822.6,549.6 822.6,529.6 618.0,480.0" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="583.7,585.5 778.4,665.7 790.1,649.5 607.2,553.2" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="517.4,618.4 552.5,822.1 571.5,815.9 555.5,606.0" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="444.5,606.0 428.5,815.9 447.5,822.1 482.6,618.4" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="392.8,553.2 209.9,649.5 221.6,665.7 416.3,585.5" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="382.0,480.0 177.4,529.6 177.4,549.6 382.0,520.0" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="416.3,414.5 268.2,270.3 256.4,286.4 392.8,446.8" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="482.6,381.6 372.2,202.4 353.1,208.5 444.5,394.0" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="555.5,394.0 646.9,208.5 627.8,202.4 517.4,381.6" fill="url(#metal)" stroke="#565656" stroke-width="2"/><polygon points="607.2,446.8 743.6,286.4 731.8,270.3 583.7,414.5" fill="url(#metal)" stroke="#565656" stroke-width="2"/>
+      <circle cx="500" cy="500" r="112" fill="url(#metal)" stroke="#555" stroke-width="3"/>
+      <circle cx="568.0" cy="500.0" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="521.0" cy="564.7" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="445.0" cy="540.0" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="445.0" cy="460.0" r="14" fill="#050505" stroke="#777" stroke-width="4"/><circle cx="521.0" cy="435.3" r="14" fill="#050505" stroke="#777" stroke-width="4"/>
+      <circle cx="500" cy="500" r="40" fill="#0a0a0a" stroke="#d8ff3e" stroke-width="4"/>
+      <text x="500" y="508" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#eee">F</text>
+    </g>
+    <text x="48" y="938" font-family="Arial" font-size="20" letter-spacing="5" fill="#777">F01 VECTOR S</text>
+    </svg>
