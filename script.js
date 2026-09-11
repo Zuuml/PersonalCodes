@@ -1,164 +1,70 @@
-const header=document.querySelector('.header'),progress=document.querySelector('.progress'),menuBtn=document.querySelector('.menu-btn'),mobile=document.querySelector('.mobile-menu');
+# FORGED v7 — multipage wheel-first site
 
-function scrollUI() {
-    const y=scrollY;
-    header?.classList.toggle('scrolled',y>25);
-    const m=document.documentElement.scrollHeight-innerHeight;
-    if(progress)progress.style.width=(m?y/m*100:0)+'%'
-}
-addEventListener('scroll',scrollUI, {
-    passive:true
-}
-);
-scrollUI();
-menuBtn?.addEventListener('click',()=> {
-    const o=!mobile.classList.contains('open');
-    mobile.classList.toggle('open',o);
-    menuBtn.classList.toggle('active',o);
-    document.body.classList.toggle('menu-open',o)
-}
-);
-mobile?.querySelectorAll('a').forEach(a=>a.onclick=()=> {
-    mobile.classList.remove('open');
-    menuBtn.classList.remove('active');
-    document.body.classList.remove('menu-open')
-}
-);
+Главное изменение: сайт перестроен вокруг дисков. Автомобили используются только как вторичный контекст в разделе Projects.
 
-const io=new IntersectionObserver(es=>es.forEach(e=> {
-    if(e.isIntersecting) {
-        e.target.classList.add('visible');
-        io.unobserve(e.target)
-    }
-}
-), {
-    threshold:.1
-}
-);
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
+## Страницы
+- index.html — главная
+- catalog.html — каталог
+- model.html?id=f01 — универсальная страница модели
+- finishes.html — покрытия
+- technology.html — технологии
+- projects.html — проекты / посадка на авто
+- contact.html — контакты / форма запроса
+
+## Служебные файлы
+- style.css — общий дизайн и мобильная адаптация
+- script.js — меню, анимации, прогресс
+- i18n.js — RU / EN / 日本語 / 中文 + валюты
+- models.js — данные моделей и базовые цены
+- assets/*.svg — локальные рендеры дисков, без внешнего фотохостинга
+
+## GitHub Pages
+Загрузите ВСЕ файлы и папку assets в корень репозитория. index.html должен лежать в корне.
+
+## Что заменить перед реальным запуском
+- Telegram: https://t.me/your_username
+- email: hello@example.com
+- телефон: +7 000 000-00-00
+- цены в models.js
+- при желании SVG-рендеры в assets на реальные фото дисков
+
+Региональные коэффициенты валют находятся в i18n.js. Сейчас они демонстрационные.
+
+READABLE SOURCE VERSION
+
+В этой сборке HTML, CSS и JavaScript приведены к многострочному читаемому виду.
+Логика, ссылки, структура страниц и assets оставлены теми же — изменено только форматирование исходников.
 
 
-/* =========================================================
-   V8 — MOBILE BACKGROUND VIDEO
-   ========================================================= */
+V8 MOBILE VIDEO
 
-const backgroundVideos = document.querySelectorAll(
-    "video[autoplay]"
-);
+Что изменено:
+- hero-bg.mp4 используется как видео-фон первого экрана
+- wheel-loop.mp4 используется во втором полноэкранном видео-блоке
+- оба фоновых ролика без аудиодорожки
+- добавлен faststart для более быстрого старта через GitHub Pages
+- autoplay + muted + loop + playsinline + webkit-playsinline
+- добавлены poster JPG для iPhone / Low Power Mode
+- видео автоматически ставятся на паузу вне экрана
+- при возврате на вкладку сайт снова пытается запустить видимые видео
+- на телефоне видео занимают весь фон через object-fit: cover
 
-function prepareBackgroundVideo(video) {
-    video.muted = true;
-    video.defaultMuted = true;
+Для GitHub загрузи всю папку этой сборки, включая assets.
 
-    video.setAttribute("muted", "");
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "");
 
-    const tryPlay = () => {
-        const promise = video.play();
+V9 — USER ASSETS / NO PRICES
 
-        if (promise && typeof promise.catch === "function") {
-            promise.catch(() => {
-                /*
-                 * iOS can still postpone autoplay in low-power mode.
-                 * The poster remains visible, and the first user touch
-                 * below will try playback again.
-                 */
-            });
-        }
-    };
+Изменения:
+- все 8 моделей каталога переведены на фотографии из assets.rar
+- карточки на главной используют реальные фото дисков
+- страница модели берёт фото из models.js
+- числовые цены удалены из каталога, главной и страницы модели
+- переключатель языка больше не показывает валюту
+- hero-bg.mp4 и wheel-loop.mp4 используются как фоновые видео
+- видео добавлены также в hero-блоки каталога, покрытий, технологий и проектов
+- раздел проектов теперь тоже визуально сфокусирован на дисках
+- раздел покрытий использует реальные фото дисков
 
-    if (video.readyState >= 2) {
-        tryPlay();
-    } else {
-        video.addEventListener(
-            "canplay",
-            tryPlay,
-            { once: true }
-        );
-    }
-
-    document.addEventListener(
-        "touchstart",
-        tryPlay,
-        { once: true, passive: true }
-    );
-
-    document.addEventListener(
-        "pointerdown",
-        tryPlay,
-        { once: true, passive: true }
-    );
-}
-
-backgroundVideos.forEach(
-    prepareBackgroundVideo
-);
-
-/*
- * Pause videos outside the viewport to save battery,
- * then resume them when they become visible again.
- */
-const videoObserver = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            const video = entry.target;
-
-            if (entry.isIntersecting) {
-                video.muted = true;
-
-                const promise = video.play();
-
-                if (
-                    promise &&
-                    typeof promise.catch === "function"
-                ) {
-                    promise.catch(() => {});
-                }
-            } else {
-                video.pause();
-            }
-        });
-    },
-    {
-        threshold: 0.08
-    }
-);
-
-backgroundVideos.forEach(
-    video => videoObserver.observe(video)
-);
-
-document.addEventListener(
-    "visibilitychange",
-    () => {
-        if (document.hidden) {
-            backgroundVideos.forEach(
-                video => video.pause()
-            );
-
-            return;
-        }
-
-        backgroundVideos.forEach(video => {
-            const rect = video.getBoundingClientRect();
-
-            if (
-                rect.bottom > 0 &&
-                rect.top < window.innerHeight
-            ) {
-                video.muted = true;
-
-                const promise = video.play();
-
-                if (
-                    promise &&
-                    typeof promise.catch === "function"
-                ) {
-                    promise.catch(() => {});
-                }
-            }
-        });
-    }
-);
+Дополнительные найденные бесплатные видео-референсы (не хотлинкованы, чтобы сайт не зависел от внешнего CDN):
+- Pexels 30418716 — Cinematic Close-Up of Classic Car Rim
+- Pexels 34748400 — Close-Up of Custom Car Wheels at Indoor Auto Show

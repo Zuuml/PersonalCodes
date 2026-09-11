@@ -5,7 +5,7 @@
   <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
   <meta content="#080808" name="theme-color"/>
   <title>
-   FORGED — Contact
+   FORGED — Catalog
   </title>
   <link href="style.css" rel="stylesheet"/>
  </head>
@@ -27,7 +27,7 @@
     <a class="" data-i18n="nav_home" href="index.html">
      Главная
     </a>
-    <a class="" data-i18n="nav_catalog" href="catalog.html">
+    <a class="active" data-i18n="nav_catalog" href="catalog.html">
      Каталог
     </a>
     <a class="" data-i18n="nav_finishes" href="finishes.html">
@@ -39,7 +39,7 @@
     <a class="" data-i18n="nav_projects" href="projects.html">
      Проекты
     </a>
-    <a class="active" data-i18n="nav_contact" href="contact.html">
+    <a class="" data-i18n="nav_contact" href="contact.html">
      Контакты
     </a>
    </nav>
@@ -49,32 +49,20 @@
     </a>
     <div class="locale">
      <button class="pill locale-btn" data-locale-label="">
-      RU · RUB
+      RU
      </button>
      <div class="locale-menu">
       <button data-lang="ru">
        Русский
-       <small>
-        RUB
-       </small>
       </button>
       <button data-lang="en">
        English
-       <small>
-        USD
-       </small>
       </button>
       <button data-lang="ja">
        日本語
-       <small>
-        JPY
-       </small>
       </button>
       <button data-lang="zh">
        简体中文
-       <small>
-        CNY
-       </small>
       </button>
      </div>
     </div>
@@ -138,32 +126,20 @@
    <div style="margin-top:25px">
     <div class="locale">
      <button class="pill locale-btn" data-locale-label="">
-      RU · RUB
+      RU
      </button>
      <div class="locale-menu">
       <button data-lang="ru">
        Русский
-       <small>
-        RUB
-       </small>
       </button>
       <button data-lang="en">
        English
-       <small>
-        USD
-       </small>
       </button>
       <button data-lang="ja">
        日本語
-       <small>
-        JPY
-       </small>
       </button>
       <button data-lang="zh">
        简体中文
-       <small>
-        CNY
-       </small>
       </button>
      </div>
     </div>
@@ -171,106 +147,284 @@
   </div>
   <main>
    <section class="page-hero">
+    <div class="page-hero-media" aria-hidden="true">
+     <video class="page-hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/wheel-loop-poster.jpg">
+      <source src="assets/wheel-loop.mp4" type="video/mp4"/>
+     </video>
+     <div class="page-hero-shade"></div>
+    </div>
     <div class="content">
      <div class="kicker">
       <b>
-       05
+       01
       </b>
-      / START
+      / COLLECTION
      </div>
-     <h1 class="display" data-i18n="contact_title">
-      СВЯЗАТЬСЯ
+     <h1 class="display" data-i18n="cat_title">
+      КАТАЛОГ
      </h1>
-     <p data-i18n="contact_p">
-      Модель автомобиля, желаемый размер и пара референсов — этого достаточно, чтобы начать расчёт
+     <p data-i18n="cat_p">
+      Выбирай направление дизайна. Размер, ширина, ET и посадка рассчитываются под конкретный автомобиль
      </p>
     </div>
    </section>
    <section class="section">
-    <div class="contact-wrap">
-     <form class="contact-panel reveal" onsubmit="event.preventDefault();alert('Demo form — connect Telegram/email endpoint before production')">
-      <label data-i18n="name">
-       Имя
-      </label>
-      <input placeholder="Name" required=""/>
-      <label data-i18n="car">
-       Автомобиль
-      </label>
-      <input placeholder="Porsche 911 / BMW M4 / ..." required=""/>
-      <label data-i18n="size">
-       Размер
-      </label>
-      <select>
-       <option>
-        18″
-       </option>
-       <option>
-        19″
-       </option>
-       <option>
-        20″
-       </option>
-       <option>
-        21″
-       </option>
-       <option>
-        22″
-       </option>
-       <option>
-        23–24″
-       </option>
-      </select>
-      <label data-i18n="message">
-       Комментарий
-      </label>
-      <textarea placeholder="Model / finish / references"></textarea>
-      <button class="btn primary" data-i18n="send" type="submit">
-       Отправить запрос
-      </button>
-     </form>
-     <div class="contact-side reveal">
-      <div>
-       <div class="kicker">
-        DIRECT CONTACT
+    <div class="filters reveal">
+     <button class="filter active" data-filter="all" data-i18n="all">
+      Все
+     </button>
+     <button class="filter" data-filter="sport" data-i18n="sport">
+      Sport
+     </button>
+     <button class="filter" data-filter="luxury" data-i18n="luxury">
+      Luxury
+     </button>
+     <button class="filter" data-filter="classic" data-i18n="classic">
+      Classic
+     </button>
+     <button class="filter" data-filter="aero" data-i18n="aero">
+      Aero
+     </button>
+    </div>
+    <div class="catalog-grid">
+     <a class="product-card reveal" data-category="sport" href="model.html?id=f01">
+      <div class="product-img">
+       <img alt="Vector S" src="assets/BBSWheel.jpg"/>
+       <span class="badge">
+        sport
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F01 / MONOBLOCK
+       </span>
+       <h3>
+        Vector S
+       </h3>
+       <div class="meta">
+        <span>
+         18–22″
+        </span>
        </div>
-       <h2>
-        LET'S
-        <br/>
-        <span style="color:var(--accent)">
-         BUILD
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
         </span>
-       </h2>
+        <span>
+         ↗
+        </span>
+       </div>
       </div>
-      <div class="contact-links">
-       <a href="https://t.me/your_username" target="_blank">
-        <span>
-         Telegram
-        </span>
-        <span>
-         ↗
-        </span>
-       </a>
-       <a href="mailto:hello@example.com">
-        <span>
-         hello@example.com
-        </span>
-        <span>
-         ↗
-        </span>
-       </a>
-       <a href="tel:+70000000000">
-        <span>
-         +7 000 000-00-00
-        </span>
-        <span>
-         ↗
-        </span>
-       </a>
+     </a>
+     <a class="product-card reveal" data-category="luxury" href="model.html?id=f02">
+      <div class="product-img">
+       <img alt="Monaco" src="assets/BLWheel.jpg"/>
+       <span class="badge">
+        luxury
+       </span>
       </div>
-     </div>
+      <div class="product-body">
+       <span class="product-code">
+        F02 / MONOBLOCK
+       </span>
+       <h3>
+        Monaco
+       </h3>
+       <div class="meta">
+        <span>
+         19–24″
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" data-category="classic" href="model.html?id=f03">
+      <div class="product-img">
+       <img alt="Heritage" src="assets/BMWWheel.jpg"/>
+       <span class="badge">
+        classic
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F03 / MONOBLOCK
+       </span>
+       <h3>
+        Heritage
+       </h3>
+       <div class="meta">
+        <span>
+         18–21″
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" data-category="aero" href="model.html?id=f04">
+      <div class="product-img">
+       <img alt="Flux" src="assets/FordWheel.jpg"/>
+       <span class="badge">
+        aero
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F04 / MONOBLOCK
+       </span>
+       <h3>
+        Flux
+       </h3>
+       <div class="meta">
+        <span>
+         20–24″
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" data-category="sport" href="model.html?id=f05">
+      <div class="product-img">
+       <img alt="Racing Line" src="assets/MansoryWheel.jpg"/>
+       <span class="badge">
+        sport
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F05 / MONOBLOCK
+       </span>
+       <h3>
+        Racing Line
+       </h3>
+       <div class="meta">
+        <span>
+         18–22″
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" data-category="luxury" href="model.html?id=f06">
+      <div class="product-img">
+       <img alt="Grand GT" src="assets/RRWheel.jpg"/>
+       <span class="badge">
+        luxury
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F06 / MONOBLOCK
+       </span>
+       <h3>
+        Grand GT
+       </h3>
+       <div class="meta">
+        <span>
+         20–24″
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" data-category="sport" href="model.html?id=f07">
+      <div class="product-img">
+       <img alt="Apex" src="assets/RedWheel.jpg"/>
+       <span class="badge">
+        sport
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F07 / MONOBLOCK
+       </span>
+       <h3>
+        Apex
+       </h3>
+       <div class="meta">
+        <span>
+         19–23″
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="product-card reveal" data-category="classic" href="model.html?id=f08">
+      <div class="product-img">
+       <img alt="Nova" src="assets/SilverWheel.jpg"/>
+       <span class="badge">
+        classic
+       </span>
+      </div>
+      <div class="product-body">
+       <span class="product-code">
+        F08 / MONOBLOCK
+       </span>
+       <h3>
+        Nova
+       </h3>
+       <div class="meta">
+        <span>
+         18–22″
+        </span>
+       </div>
+       <div class="product-link">
+        <span data-i18n="details">
+         Подробнее
+        </span>
+        <span>
+         ↗
+        </span>
+       </div>
+      </div>
+     </a>
     </div>
    </section>
   </main>
+  <script>
+   document.addEventListener('DOMContentLoaded',()=>{const bs=document.querySelectorAll('.filter'),cs=document.querySelectorAll('.product-card');bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;cs.forEach(c=>c.classList.toggle('hidden',f!=='all'&&c.dataset.category!==f))})})
+  </script>
   <footer>
    <span>
     ©

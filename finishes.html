@@ -5,7 +5,7 @@
   <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
   <meta content="#080808" name="theme-color"/>
   <title>
-   FORGED — Finishes
+   FORGED — Contact
   </title>
   <link href="style.css" rel="stylesheet"/>
  </head>
@@ -30,7 +30,7 @@
     <a class="" data-i18n="nav_catalog" href="catalog.html">
      Каталог
     </a>
-    <a class="active" data-i18n="nav_finishes" href="finishes.html">
+    <a class="" data-i18n="nav_finishes" href="finishes.html">
      Покрытия
     </a>
     <a class="" data-i18n="nav_tech" href="technology.html">
@@ -39,7 +39,7 @@
     <a class="" data-i18n="nav_projects" href="projects.html">
      Проекты
     </a>
-    <a class="" data-i18n="nav_contact" href="contact.html">
+    <a class="active" data-i18n="nav_contact" href="contact.html">
      Контакты
     </a>
    </nav>
@@ -49,32 +49,20 @@
     </a>
     <div class="locale">
      <button class="pill locale-btn" data-locale-label="">
-      RU · RUB
+      RU
      </button>
      <div class="locale-menu">
       <button data-lang="ru">
        Русский
-       <small>
-        RUB
-       </small>
       </button>
       <button data-lang="en">
        English
-       <small>
-        USD
-       </small>
       </button>
       <button data-lang="ja">
        日本語
-       <small>
-        JPY
-       </small>
       </button>
       <button data-lang="zh">
        简体中文
-       <small>
-        CNY
-       </small>
       </button>
      </div>
     </div>
@@ -138,32 +126,20 @@
    <div style="margin-top:25px">
     <div class="locale">
      <button class="pill locale-btn" data-locale-label="">
-      RU · RUB
+      RU
      </button>
      <div class="locale-menu">
       <button data-lang="ru">
        Русский
-       <small>
-        RUB
-       </small>
       </button>
       <button data-lang="en">
        English
-       <small>
-        USD
-       </small>
       </button>
       <button data-lang="ja">
        日本語
-       <small>
-        JPY
-       </small>
       </button>
       <button data-lang="zh">
        简体中文
-       <small>
-        CNY
-       </small>
       </button>
      </div>
     </div>
@@ -171,102 +147,102 @@
   </div>
   <main>
    <section class="page-hero">
-    <img alt="" class="ghost" src="assets/f06.svg"/>
     <div class="content">
      <div class="kicker">
       <b>
-       02
+       05
       </b>
-      / SURFACE
+      / START
      </div>
-     <h1 class="display" data-i18n="fin_title">
-      ПОКРЫТИЯ
+     <h1 class="display" data-i18n="contact_title">
+      СВЯЗАТЬСЯ
      </h1>
-     <p data-i18n="fin_p">
-      Финиш меняет характер диска не меньше, чем форма спиц
+     <p data-i18n="contact_p">
+      Модель автомобиля, желаемый размер и пара референсов — этого достаточно, чтобы начать расчёт
      </p>
     </div>
    </section>
    <section class="section">
-    <div class="finish-grid">
-     <article class="finish-card brushed reveal">
-      <div class="surface">
-      </div>
-      <div class="finish-content">
+    <div class="contact-wrap">
+     <form class="contact-panel reveal" onsubmit="event.preventDefault();alert('Demo form — connect Telegram/email endpoint before production')">
+      <label data-i18n="name">
+       Имя
+      </label>
+      <input placeholder="Name" required=""/>
+      <label data-i18n="car">
+       Автомобиль
+      </label>
+      <input placeholder="Porsche 911 / BMW M4 / ..." required=""/>
+      <label data-i18n="size">
+       Размер
+      </label>
+      <select>
+       <option>
+        18″
+       </option>
+       <option>
+        19″
+       </option>
+       <option>
+        20″
+       </option>
+       <option>
+        21″
+       </option>
+       <option>
+        22″
+       </option>
+       <option>
+        23–24″
+       </option>
+      </select>
+      <label data-i18n="message">
+       Комментарий
+      </label>
+      <textarea placeholder="Model / finish / references"></textarea>
+      <button class="btn primary" data-i18n="send" type="submit">
+       Отправить запрос
+      </button>
+     </form>
+     <div class="contact-side reveal">
+      <div>
        <div class="kicker">
-        01 / BRUSHED
+        DIRECT CONTACT
        </div>
-       <h3>
-        Brushed
-       </h3>
-       <p>
-        Живая направленная текстура алюминия под защитным лаком
-       </p>
+       <h2>
+        LET'S
+        <br/>
+        <span style="color:var(--accent)">
+         BUILD
+        </span>
+       </h2>
       </div>
-     </article>
-     <article class="finish-card reveal">
-      <div class="surface">
+      <div class="contact-links">
+       <a href="https://t.me/your_username" target="_blank">
+        <span>
+         Telegram
+        </span>
+        <span>
+         ↗
+        </span>
+       </a>
+       <a href="mailto:hello@example.com">
+        <span>
+         hello@example.com
+        </span>
+        <span>
+         ↗
+        </span>
+       </a>
+       <a href="tel:+70000000000">
+        <span>
+         +7 000 000-00-00
+        </span>
+        <span>
+         ↗
+        </span>
+       </a>
       </div>
-      <div class="finish-content">
-       <div class="kicker">
-        02 / POLISHED
-       </div>
-       <h3>
-        Polished
-       </h3>
-       <p>
-        Высокий блеск и максимальный контраст сложной геометрии
-       </p>
-      </div>
-     </article>
-     <article class="finish-card black reveal">
-      <div class="surface">
-      </div>
-      <div class="finish-content">
-       <div class="kicker">
-        03 / SATIN
-       </div>
-       <h3>
-        Satin Black
-       </h3>
-       <p>
-        Спокойная матовая поверхность без визуального шума
-       </p>
-      </div>
-     </article>
-     <article class="finish-card bronze reveal">
-      <div class="surface">
-      </div>
-      <div class="finish-content">
-       <div class="kicker">
-        04 / CUSTOM
-       </div>
-       <h3>
-        Bronze / Custom
-       </h3>
-       <p>
-        Нестандартные оттенки и двухцветные комбинации под проект
-       </p>
-      </div>
-     </article>
-    </div>
-   </section>
-   <section class="section cta">
-    <div class="two-col">
-     <h2 class="display">
-      FINISH
-      <br/>
-      <em>
-       MATTERS
-      </em>
-     </h2>
-     <div>
-      <p class="lead">
-       Finish is selected together with the wheel design, not after it
-      </p>
-      <a class="btn primary" data-i18n="quote" href="contact.html">
-       Рассчитать комплект
-      </a>
      </div>
     </div>
    </section>

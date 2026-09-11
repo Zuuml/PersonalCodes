@@ -1,52 +1,305 @@
-# FORGED v7 — multipage wheel-first site
-
-Главное изменение: сайт перестроен вокруг дисков. Автомобили используются только как вторичный контекст в разделе Projects.
-
-## Страницы
-- index.html — главная
-- catalog.html — каталог
-- model.html?id=f01 — универсальная страница модели
-- finishes.html — покрытия
-- technology.html — технологии
-- projects.html — проекты / посадка на авто
-- contact.html — контакты / форма запроса
-
-## Служебные файлы
-- style.css — общий дизайн и мобильная адаптация
-- script.js — меню, анимации, прогресс
-- i18n.js — RU / EN / 日本語 / 中文 + валюты
-- models.js — данные моделей и базовые цены
-- assets/*.svg — локальные рендеры дисков, без внешнего фотохостинга
-
-## GitHub Pages
-Загрузите ВСЕ файлы и папку assets в корень репозитория. index.html должен лежать в корне.
-
-## Что заменить перед реальным запуском
-- Telegram: https://t.me/your_username
-- email: hello@example.com
-- телефон: +7 000 000-00-00
-- цены в models.js
-- при желании SVG-рендеры в assets на реальные фото дисков
-
-Региональные коэффициенты валют находятся в i18n.js. Сейчас они демонстрационные.
-
-READABLE SOURCE VERSION
-
-В этой сборке HTML, CSS и JavaScript приведены к многострочному читаемому виду.
-Логика, ссылки, структура страниц и assets оставлены теми же — изменено только форматирование исходников.
-
-
-V8 MOBILE VIDEO
-
-Что изменено:
-- hero-bg.mp4 используется как видео-фон первого экрана
-- wheel-loop.mp4 используется во втором полноэкранном видео-блоке
-- оба фоновых ролика без аудиодорожки
-- добавлен faststart для более быстрого старта через GitHub Pages
-- autoplay + muted + loop + playsinline + webkit-playsinline
-- добавлены poster JPG для iPhone / Low Power Mode
-- видео автоматически ставятся на паузу вне экрана
-- при возврате на вкладку сайт снова пытается запустить видимые видео
-- на телефоне видео занимают весь фон через object-fit: cover
-
-Для GitHub загрузи всю папку этой сборки, включая assets.
+<!doctype html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#080808" name="theme-color"/>
+  <title>
+   FORGED — Projects
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body id="top">
+  <div class="noise">
+  </div>
+  <div class="progress">
+  </div>
+  <header class="header">
+   <a class="logo" href="index.html">
+    <span class="logo-mark">
+     F
+    </span>
+    <span>
+     FORGED
+    </span>
+   </a>
+   <nav class="nav">
+    <a class="" data-i18n="nav_home" href="index.html">
+     Главная
+    </a>
+    <a class="" data-i18n="nav_catalog" href="catalog.html">
+     Каталог
+    </a>
+    <a class="" data-i18n="nav_finishes" href="finishes.html">
+     Покрытия
+    </a>
+    <a class="" data-i18n="nav_tech" href="technology.html">
+     Технологии
+    </a>
+    <a class="active" data-i18n="nav_projects" href="projects.html">
+     Проекты
+    </a>
+    <a class="" data-i18n="nav_contact" href="contact.html">
+     Контакты
+    </a>
+   </nav>
+   <div class="header-actions">
+    <a class="pill cta-pill" data-i18n="quote" href="contact.html">
+     Рассчитать комплект
+    </a>
+    <div class="locale">
+     <button class="pill locale-btn" data-locale-label="">
+      RU
+     </button>
+     <div class="locale-menu">
+      <button data-lang="ru">
+       Русский
+      </button>
+      <button data-lang="en">
+       English
+      </button>
+      <button data-lang="ja">
+       日本語
+      </button>
+      <button data-lang="zh">
+       简体中文
+      </button>
+     </div>
+    </div>
+    <button aria-label="Menu" class="menu-btn">
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
+  </header>
+  <div class="mobile-menu">
+   <a href="index.html">
+    <span data-i18n="nav_home">
+     Главная
+    </span>
+    <small>
+     01
+    </small>
+   </a>
+   <a href="catalog.html">
+    <span data-i18n="nav_catalog">
+     Каталог
+    </span>
+    <small>
+     02
+    </small>
+   </a>
+   <a href="finishes.html">
+    <span data-i18n="nav_finishes">
+     Покрытия
+    </span>
+    <small>
+     03
+    </small>
+   </a>
+   <a href="technology.html">
+    <span data-i18n="nav_tech">
+     Технологии
+    </span>
+    <small>
+     04
+    </small>
+   </a>
+   <a href="projects.html">
+    <span data-i18n="nav_projects">
+     Проекты
+    </span>
+    <small>
+     05
+    </small>
+   </a>
+   <a href="contact.html">
+    <span data-i18n="nav_contact">
+     Контакты
+    </span>
+    <small>
+     06
+    </small>
+   </a>
+   <div style="margin-top:25px">
+    <div class="locale">
+     <button class="pill locale-btn" data-locale-label="">
+      RU
+     </button>
+     <div class="locale-menu">
+      <button data-lang="ru">
+       Русский
+      </button>
+      <button data-lang="en">
+       English
+      </button>
+      <button data-lang="ja">
+       日本語
+      </button>
+      <button data-lang="zh">
+       简体中文
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <main>
+   <section class="page-hero">
+    <div class="page-hero-media" aria-hidden="true">
+     <video class="page-hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/hero-bg-poster.jpg">
+      <source src="assets/hero-bg.mp4" type="video/mp4"/>
+     </video>
+     <div class="page-hero-shade"></div>
+    </div>
+    <div class="content">
+     <div class="kicker">
+      <b>
+       04
+      </b>
+      / FITMENT
+     </div>
+     <h1 class="display" data-i18n="projects_title">
+      ПРОЕКТЫ
+     </h1>
+     <p data-i18n="projects_p">
+      Автомобиль здесь только показывает, как диск работает в реальной посадке
+     </p>
+    </div>
+   </section>
+   <section class="section">
+    <div class="project-grid">
+     <article class="project large reveal">
+      <div class="project-media">
+       <img alt="Fitment project" src="assets/photo_2026-09-11_15-07-04.jpg"/>
+      </div>
+      <div class="project-body">
+       <div class="kicker">
+        PROJECT / 01
+       </div>
+       <h3>
+        911 / STREET
+       </h3>
+       <p>
+        Автомобиль показан как контекст: главная роль остаётся у посадки, профиля и поверхности диска
+       </p>
+       <div class="project-specs">
+        <span>
+         <b>
+          WHEEL
+         </b>
+         Vector S
+        </span>
+        <span>
+         <b>
+          SIZE
+         </b>
+         20×9 / 20×11.5
+        </span>
+        <span>
+         <b>
+          FINISH
+         </b>
+         Brushed
+        </span>
+       </div>
+      </div>
+     </article>
+     <article class="project reveal">
+      <div class="project-media">
+       <img alt="Fitment project" src="assets/photo_2026-09-11_15-07-13.jpg"/>
+      </div>
+      <div class="project-body">
+       <div class="kicker">
+        PROJECT / 02
+       </div>
+       <h3>
+        GT / TOURING
+       </h3>
+       <p>
+        Глубокая лицевая часть и более спокойная геометрия для крупного GT
+       </p>
+       <div class="project-specs">
+        <span>
+         <b>
+          WHEEL
+         </b>
+         Grand GT
+        </span>
+        <span>
+         <b>
+          SIZE
+         </b>
+         21×10 / 21×12
+        </span>
+        <span>
+         <b>
+          FINISH
+         </b>
+         Polished
+        </span>
+       </div>
+      </div>
+     </article>
+     <article class="project reveal">
+      <div class="project-media">
+       <img alt="Fitment project" src="assets/photo_2026-09-11_15-07-17.jpg"/>
+      </div>
+      <div class="project-body">
+       <div class="kicker">
+        PROJECT / 03
+       </div>
+       <h3>
+        SEDAN / DAILY
+       </h3>
+       <p>
+        Многоспицевый дизайн с умеренной посадкой для ежедневной машины
+       </p>
+       <div class="project-specs">
+        <span>
+         <b>
+          WHEEL
+         </b>
+         Heritage
+        </span>
+        <span>
+         <b>
+          SIZE
+         </b>
+         19×9 / 19×10
+        </span>
+        <span>
+         <b>
+          FINISH
+         </b>
+         Satin
+        </span>
+       </div>
+      </div>
+     </article>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <span>
+    ©
+    <span data-year="">
+    </span>
+    FORGED
+   </span>
+   <span data-i18n="footer">
+    FORGED — forged wheels
+   </span>
+   <a href="#top">
+    ↑ TOP
+   </a>
+  </footer>
+  <script src="models.js">
+  </script>
+  <script src="i18n.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
