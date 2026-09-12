@@ -343,6 +343,7 @@ h1,h2,h3,p {
 }
 
 .hero {
+    min-height:100vh;
     min-height:100svh;
     position:relative;
     display:grid;
@@ -711,6 +712,7 @@ h1,h2,h3,p {
     display:grid;
     grid-template-columns:.9fr 1.1fr;
     gap:5vw;
+    min-height:100vh;
     min-height:100svh;
     align-items:center
 }
@@ -1424,6 +1426,7 @@ footer {
 /* Phones */
 @media (max-width: 700px) {
     .video-hero {
+        min-height: 100vh;
         min-height: 100svh;
         padding:
             calc(94px + env(safe-area-inset-top))
