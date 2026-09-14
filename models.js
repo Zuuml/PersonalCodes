@@ -13,7 +13,7 @@ window.FORGED_MODELS = [
     "id": "f02",
     "image": "assets/BLWheel.jpg",
     "name": "Monaco",
-    "category": "luxury",
+    "category": "sport",
     "sizes": "19–24″",    "spokes": "Split-spoke",
     "finish": "Polished / Gloss",
     "weight": "from 9.4 kg"
@@ -43,7 +43,7 @@ window.FORGED_MODELS = [
     "id": "f05",
     "image": "assets/MansoryWheel.jpg",
     "name": "Racing Line",
-    "category": "sport",
+    "category": "luxury",
     "sizes": "18–22″",    "spokes": "Open-spoke",
     "finish": "Satin / Gloss",
     "weight": "from 8.4 kg"

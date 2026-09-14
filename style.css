@@ -1662,3 +1662,21 @@ footer {
             linear-gradient(90deg, rgba(8,8,8,.58) 0%, rgba(8,8,8,.18) 100%);
     }
 }
+
+
+/* Carbon finish */
+.finish-card.carbon {
+    grid-column: 1 / -1;
+    min-height: 460px;
+}
+
+.finish-card.carbon .surface img {
+    object-position: center;
+}
+
+@media (max-width: 700px) {
+    .finish-card.carbon {
+        grid-column: auto;
+        min-height: 420px;
+    }
+}

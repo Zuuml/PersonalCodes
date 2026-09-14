@@ -68,3 +68,10 @@ V9 — USER ASSETS / NO PRICES
 Дополнительные найденные бесплатные видео-референсы (не хотлинкованы, чтобы сайт не зависел от внешнего CDN):
 - Pexels 30418716 — Cinematic Close-Up of Classic Car Rim
 - Pexels 34748400 — Close-Up of Custom Car Wheels at Indoor Auto Show
+
+
+V10
+- F05 / Mansory / Racing Line: Sport -> Luxury
+- F02 / Monaco: Luxury -> Sport
+- Finish cards now show finish textures instead of wheel photos
+- Added Carbon finish
